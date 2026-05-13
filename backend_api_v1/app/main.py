@@ -23,3 +23,6 @@ Base.metadata.create_all(bind=engine)
 app.include_router(user.router)
 app.include_router(pg.router)
 app.include_router(booking.router)
+@app.get("/")
+def home():
+    return {"message": "PG Booking Backend Running Successfully"}
